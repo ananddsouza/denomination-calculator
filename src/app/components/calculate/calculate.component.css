@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  grid-gap: 5px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.right-align {
+  text-align: right;
+}
+
+input.right-align::-webkit-outer-spin-button,
+input.right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.right-align {
+  appearance: textfield;
+}

@@ -1,0 +1,12 @@
+<div class="history-container">
+  <mat-card class="history-card">
+    <mat-card-header>
+      <mat-card-subtitle>Amount History Tracker</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-chip-set *ngFor="let amount of amounts" aria-label="Amounts">
+        <mat-chip>{{ amount }}</mat-chip>
+      </mat-chip-set>
+    </mat-card-content>
+  </mat-card>
+</div>

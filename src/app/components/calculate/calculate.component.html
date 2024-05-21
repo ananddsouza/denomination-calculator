@@ -1,0 +1,47 @@
+<div class="container">
+  <!-- Input Field -->
+  <mat-form-field floatLabel="always" appearance="fill">
+    <mat-label>Enter amount</mat-label>
+    <input
+      matInput
+      type="text"
+      class="right-align"
+      [(ngModel)]="amount"
+      required
+      (keydown.enter)="calculateDenominations()"
+      (input)="validateInput($event)"
+      [ngModelOptions]="{ updateOn: 'change' }"
+      [pattern]="'^[0-9]+(\\.[0-9]{1,2})?$'"
+    />
+    <span matTextPrefix>€&nbsp;</span>
+    <mat-error *ngIf="amountControl.hasError('pattern')"
+      >Invalid input. Only positive numbers with up to 2 decimal places are
+      allowed.</mat-error
+    >
+  </mat-form-field>
+
+  <!-- Calculate Button -->
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="calculateDenominations()"
+    [disabled]="amount == null"
+  >
+    Calculate
+  </button>
+
+  <!-- Reset Button -->
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="resetPage()"
+    [disabled]="amount == null"
+  >
+    Reset
+  </button>
+
+  <!-- Toggle to switch Calculation mode -->
+  <mat-slide-toggle [(ngModel)]="isCalculateOnServer"
+    >Calculate on Server</mat-slide-toggle
+  >
+</div>
