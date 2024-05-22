@@ -12,7 +12,7 @@ The web interface allows user to enter certain amount and returns denominations.
 
 These calculations can be done on the client side i.e., on browser and also on server side. The user can switch between these calculation modes using the switch provided in the web interface.
 
-For the server side to be working, the Spring Boot application must be in running state. If the user calculates the denominations without the server running, it will simply fail and show an error to the user.
+For the server side to be working, the Spring Boot [application](https://github.com/ananddsouza/denomination-calculator-backend) must be in running state. If the user calculates the denominations without the server running, it will simply fail and show an error to the user.
 
 The client application is assumed to be running on `http://localhost:4200/`, and the server application on `http://localhost:8080/`.
 
